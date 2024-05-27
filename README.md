@@ -398,8 +398,8 @@ function library:Watermark(text)
         waterText.Text = text
         waterText.TextColor3 = Color3.fromRGB(198, 198, 198)
         waterText.TextTransparency = 1
-        waterText.TextSize = 14.000
-        waterText.RichText = true
+        waterText.TextSize = 17.000
+        waterText.RichText = false
     
         local NewSize = TextService:GetTextSize(waterText.Text, waterText.TextSize, waterText.Font, Vector2.new(math.huge, math.huge))
         waterText.Size = UDim2.new(0, NewSize.X + 8, 0, 24)
@@ -658,7 +658,7 @@ function library:InitNotifications(text, duration, callback)
             NewSize = TextService:GetTextSize(notifText.Text, notifText.TextSize, notifText.Font, Vector2.new(math.huge, math.huge))
             local NewSize_2 = NewSize
             if IsRunning then
-                TweenService:Create(edge, TweenTable["notification_load"], {Size = UDim2.new(0, NewSize.X + 10, 0, 26)}):Play()
+                TweenService:Create(edge, TweenTable["notification_load"], {Size = UDim2.new(0, NewSize.X + 20, 0, 26)}):Play()
                 TweenService:Create(background, TweenTable["notification_load"], {Size = UDim2.new(0, NewSize.X + 8, 0, 24)}):Play()
                 TweenService:Create(notifText, TweenTable["notification_load"], {Size = UDim2.new(0, NewSize.X + 8, 0, 24)}):Play()
                 wait()
